@@ -50,7 +50,7 @@ This project is a basic demonstration of login functionality using Spring Boot a
 
 ## Screenshot
 
-![Login Page](/images/LoginPage.jpeg)
+![LoginPage](https://github.com/user-attachments/assets/cba16f89-8511-48a4-a96a-9bb223eafb43)
 
 ## License
 
