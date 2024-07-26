@@ -35,7 +35,7 @@ This project is a basic demonstration of login functionality using Spring Boot a
     ```
 2. Navigate to the project directory:
     ```bash
-    cd login-application
+    cd loginapplication
     ```
 3. Build and run the application:
     ```bash
