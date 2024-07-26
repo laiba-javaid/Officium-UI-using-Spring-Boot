@@ -31,7 +31,7 @@ This project is a basic demonstration of login functionality using Spring Boot a
 
 1. Clone the repository:
     ```bash
-    git clone https://github.com/yourusername/login-application.git
+    git clone https://github.com/laiba-javaid/loginapplication.git
     ```
 2. Navigate to the project directory:
     ```bash
