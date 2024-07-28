@@ -4,9 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome Page</title>
+    <link rel="stylesheet" type="text/css" href="/css/style.css">
 </head>
 <body>
-    <h1>Welcome, <span th:text="${username}"></span></h1>
+    <div id="welcome-container">
+        <img src="/images/welcomeIcon.png" alt="Welcome" style="width: 50px; height: 50px;">
+        <h1>Welcome, <span th:text="${username}"></span></h1>
+        <div class="separator"></div>
     <p>You have successfully logged in.</p>
+    <button><a href="/home">Go to Home Page</a></button>
+    </div>
+    
 </body>
 </html>
