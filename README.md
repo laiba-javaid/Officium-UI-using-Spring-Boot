@@ -62,3 +62,22 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [Thymeleaf](https://www.thymeleaf.org/)
 
 ---
+tailblock
+hyperui
+ant design
+freefrontend
+tailwind componenets
+apexchart
+reactflow
+dave grave
+byte
+excalidraw
+headlessui
+shedcn
+aos
+reacttilt
+toast
+reactflow
+reactmarquee
+codepen.io
+devui
