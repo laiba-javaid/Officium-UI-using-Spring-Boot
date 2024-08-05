@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        .top-bar {
+            background-color: #843bc7;
+            padding: 10px;
+            text-align: center;
+            font-weight: bold;
+            color: white;
+        }
+        .container {
+            display: flex;
+            height: calc(100vh - 40px);
+        }
+        .sidebar {
+            width: 15%;
+            background-color: rgb(138, 110, 170);
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .sidebar button {
+            display: block;
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        .metadata {
+            width: 15%;
+            background-color: #e0e0e0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        .metadata div {
+            margin-bottom: 20px;
+            padding: 10px;
+            cursor: pointer;
+        }
+        .metadata .active {
+            background-color: rgb(209, 206, 206);
+        }
+        .content {
+            width: 70%;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        Select metadata for document id: <span th:text="${documentId}"></span>
+    </div>
+    <div class="container">
+        <div class="sidebar">
+            <a href="/letter"><button>Document</button></a>
+            <button>Sticky</button>
+        </div>
+        <div class="metadata">
+            <div onclick="showContent('fileCaseNo', this)">File Case No</div>
+            <div onclick="showContent('to', this)">To</div>
+            <div onclick="showContent('copyTo', this)">Copy To</div>
+            <div onclick="showContent('signedTo', this)">Signed To</div>
+            <div onclick="showContent('signedBy', this)">Signed By</div>
+            <div onclick="showContent('markTo', this)">Mark To</div>
+        </div>
+        <div class="content" id="content">
+            <!-- Content will be dynamically loaded here based on selection -->
+        </div>
+    </div>
+
+    <script>
+        function showContent(option, element) {
+           
+
+            let content = document.getElementById('content');
+            let metadataDivs = document.querySelectorAll('.metadata div');
+            metadataDivs.forEach(div => div.classList.remove('active'));
+            element.classList.add('active');
+
+            switch (option) {
+                case 'fileCaseNo':
+                    content.innerHTML = `
+                        <h2>Departments:</h2><br>
+                        <form>
+                            <input type="checkbox" name="department" value="adminIt" id="admin"><label for="admin"> Admin Information Technology</label><br> 
+                            <label><input type="checkbox" name="department" value="directorIt"> Director Information Technology Office</label><br>
+                            <label><input type="checkbox" name="department" value="hardware"> Hardware</label><br>
+                            <label><input type="checkbox" name="department" value="ITdept"> Information Technology Department</label><br>
+                            <label><input type="checkbox" name="department" value="inventory"> Inventory</label><br>
+                            <label><input type="checkbox" name="department" value="officeAutomation"> Office Automation</label><br>
+                            <label><input type="checkbox" name="department" value="citizenPortal"> POF Pakistan Citizen Portal Office</label><br>
+                            <label><input type="checkbox" name="department" value="webDept"> Web IT Dept</label><br>
+                        </form>
+                    `;
+                    break;
+                case 'to':
+                    content.innerHTML = '<h2>To</h2><p>Content for To...</p>';
+                    break;
+                case 'copyTo':
+                    content.innerHTML = '<h2>Copy To</h2><p>Content for Copy To...</p>';
+                    break;
+                case 'signedTo':
+                    content.innerHTML = '<h2>Signed To</h2><p>Content for Signed To...</p>';
+                    break;
+                case 'signedBy':
+                    content.innerHTML = '<h2>Signed By</h2><p>Content for Signed By...</p>';
+                    break;
+                case 'markTo':
+                    content.innerHTML = '<h2>Mark To</h2><p>Content for Mark To...</p>';
+                    break;
+                default:
+                    content.innerHTML = '<h2>Default</h2><p>Default content...</p>';
+            }
+        }
+    </script>
+</body>
+</html>
