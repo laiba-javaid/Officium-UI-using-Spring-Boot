@@ -13,8 +13,9 @@
 	<link href="https://cdn.jsdelivr.net/npm/simple-datatables@latest/dist/style.css" rel="stylesheet" />
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js" crossorigin="anonymous"></script>
 	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="/css/3dgraph.css">
 </head>
-<body>
+
 	<body class="sb-nav-fixed">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <!-- Navbar Brand-->
@@ -60,7 +61,7 @@
                             <div class="collapse" id="collapseCreateNew" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
 									<a class="nav-link" href="/letter"><i class="fa-solid fa-envelope"></i>&nbsp;&nbsp;Letter</a>
-                                    <a class="nav-link" href=""><i class="fa-regular fa-note-sticky"></i>&nbsp;&nbsp; Note</a>
+                                    <a class="nav-link" href="/note"><i class="fa-regular fa-note-sticky"></i>&nbsp;&nbsp; Note</a>
 									<a class="nav-link" href=""><i class="fa-regular fa-file-lines"></i>&nbsp;&nbsp;Noting</a>
                                 </nav>
                             </div>
@@ -113,8 +114,8 @@
             </div>
             <div id="layoutSidenav_content">
                 <main>
-                    <div class="container-fluid px-4">
-                        <h1 class="mt-4">Dashboard</h1>
+                    <div class="container-fluid px-4 mt-60">
+                        <h1 class="mt-4 text-white">Dashboard</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item active">Dashboard</li>
                         </ol>
@@ -156,6 +157,80 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="chart-container">
+                            <div class="base"></div>
+                                <!-- Left Side Meter-->
+                            <ul class="meter">
+                              <li><div>$100,000</div></li>
+                              <li><div>$80,000</div></li>
+                              <li><div>$60,000</div></li>
+                              <li><div>$40,000</div></li>
+                              <li><div>Less Than $20,000</div></li>
+                            </ul>
+                            <!-- Background-Grid -->
+                            <table>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                              <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                              </tr>
+                            </table>
+                            <!-- End Background Grid -->
+                         
+                            <div class="bar one"></div>   
+                            <div class="bar two"></div>   
+                            <div class="bar three"></div>
+                            <div class="bar four"></div>   
+                            <div class="bar five"></div>   
+                            <div class="bar six"></div>
+                            <div class="bar seven"></div>   
+                            <div class="bar eight"></div> 
+                          </div>
 						<div class="donuts-container">
 							<!-- Donut Chart 1 -->
 							<div class="donut" style="--first: .40; --second: .33; --third: .12; --fourth: .08; --fifth: 0.07">
@@ -165,8 +240,8 @@
 								<div class="donut__slice donut__slice__fourth"></div>
 								<div class="donut__slice donut__slice__fifth"></div>
 								<div class="donut__label">
-									<div class="donut__label__heading">Donut Charts</div>
-									<div class="donut__label__sub">with Pure CSS</div>
+									<div class="donut__label__heading"> Letter Writing Usage</div>
+									<div class="donut__label__sub"></div>
 								</div>
 							</div>
 					
@@ -178,23 +253,11 @@
 								<div class="donut__slice donut__slice__fourth"></div>
 								<div class="donut__slice donut__slice__fifth"></div>
 								<div class="donut__label">
-									<div class="donut__label__heading">Donut Charts</div>
-									<div class="donut__label__sub">with Pure CSS</div>
+									<div class="donut__label__heading">Attachment Types in Emails</div>
+									<div class="donut__label__sub"></div>
 								</div>
 							</div>
-					
-							<!-- Donut Chart 3 -->
-							<div class="donut" style="--first: .70; --second: .16; --third: .10; --fourth: .02; --fifth: .02; --donut-spacing: 2;">
-								<div class="donut__slice donut__slice__first"></div>
-								<div class="donut__slice donut__slice__second"></div>
-								<div class="donut__slice donut__slice__third"></div>
-								<div class="donut__slice donut__slice__fourth"></div>
-								<div class="donut__slice donut__slice__fifth"></div>
-								<div class="donut__label">
-									<div class="donut__label__heading">Donut Charts</div>
-									<div class="donut__label__sub">with Pure CSS</div>
-								</div>
-							</div>
+							
 						</div>
                         
                     </div>
@@ -208,6 +271,6 @@
         <script src="../demo/chart-bar-demo.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/simple-datatables@latest" crossorigin="anonymous"></script>
         <script src="../js/datatables-simple-demo.js"></script>
-    </body>
+
 </body>
 </html>
