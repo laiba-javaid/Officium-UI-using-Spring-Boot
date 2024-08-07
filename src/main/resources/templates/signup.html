@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
     <link rel="stylesheet" href="./css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <title>Login Application</title>
+    <title>Sign Up</title>
 </head>
 <body>
     <div id="login-container">
@@ -16,28 +16,35 @@
     
         <section class="main">
             <div class="login-container">
-                <p class="title">Welcome Back</p>
+                <p class="title">Create Account</p>
                 <div class="separator"></div>
-                <p class="welcome-message">Please, provide login credential to proceed and have access to all our services</p>
+                <p class="welcome-message">Please, fill in the required fields</p>
     
-                <form class="login-form" action="/login" method="post">
+                <form class="login-form" action="/signup" method="post">
                     <div class="form-control">
                         <input type="text" name="username" placeholder="Enter Username" required>
                         <i class="fas fa-user"></i>
                     </div>
                     <div class="form-control">
+                        <input type="email" name="email" placeholder="Enter Email" required>
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <div class="form-control">
                         <input type="password" name="password" placeholder="Enter Password" required>
                         <i class="fas fa-lock"></i>
                     </div>
-                    <a href="#">Forgot your password?</a>
-                    <button class="submit">Login</button>
-                    <span>or login with social accounts</span>
+                    <div class="form-control">
+                        <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <button class="submit">Sign Up</button>
+                    <span>or signup with social accounts</span>
                     <div class="social-container">
                         <a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
                         <a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
                         <a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
                     </div>
-                    <p>Don't have an account? <a href="/signup">Sign up</a></p>
+                    <p>Already have an account? <a href="/login">Login</a></p>
                 </form>
                 <div th:if="${error}">
                     <p style="color:red;" th:text="${error}"></p>
